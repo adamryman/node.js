@@ -3,7 +3,15 @@ sudo: true
 before_install:
         - wget http://adamryman.com/files/splunk_64.tgz
         - tar xzf splunk_64.tgz
-        - sudo ./splunk/bin/splunk start --accept-license
+        - uname -a
+        - ls
+        - cd splunk
+        - ls
+        - cd bin
+        - ls
+        - sudo ./splunk start --accept-license
+        - cd ..
+        - cd ..
 
 language: node_js
 
