@@ -1,8 +1,8 @@
 sudo: true
 
 before_install:
-        - wget http://adamryman.com/files/splunk.tgz
-        - tar xzf splunk.tgz
+        - wget http://adamryman.com/files/splunk_64.tgz
+        - tar xzf splunk_64.tgz
         - uname -a
         - ls
         - cd splunk
