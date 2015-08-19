@@ -4,11 +4,13 @@ before_install:
         - wget http://adamryman.com/files/splunk_64.tgz
         - tar xzf splunk_64.tgz
         - uname -a
+        - echo $SPLUNK_HOME
         - ls
         - cd splunk
         - ls
         - cd bin
         - ls
+        - echo $SPLUNK_HOME
         - sudo ./splunk start --accept-license
         - cd ..
         - cd ..
