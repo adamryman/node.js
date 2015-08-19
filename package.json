@@ -16,7 +16,7 @@
     "node": ">= 0.4"
   },
   "dependencies": {
-    "request": "^2.60.0"
+    "request": "2.60.x"
   },
   "devDependencies": {
     "vows": "0.6.x"
