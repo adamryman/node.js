@@ -15,9 +15,10 @@
   "engines": {
     "node": ">= 0.4"
   },
-  "dependencies": {},
+  "dependencies": {
+    "request": "^2.60.0"
+  },
   "devDependencies": {
     "vows": "0.6.x"
   }
 }
-
