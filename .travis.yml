@@ -3,7 +3,7 @@ sudo: true
 before_install:
         - wget http://adamryman.com/files/splunk.deb
         - sudo dpkg -i splunk.deb
-        - sudo /opt/splunk/bin/start --accept-license
+        - sudo /opt/splunk/bin/splunk start --accept-license
 language: node_js
 
 # test on two node.js versions: 0.6 and 0.8
