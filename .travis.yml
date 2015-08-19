@@ -11,6 +11,7 @@ before_install:
         - cd bin
         - ls
         - echo $SPLUNK_HOME
+        - sudo ./splunk validate
         - sudo ./splunk start --accept-license
         - cd ..
         - cd ..
