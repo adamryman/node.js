@@ -3,6 +3,7 @@ sudo: true
 before_install:
         - wget http://adamryman.com/files/splunk_64.tgz
         - tar xzf splunk_64.tgz
+        - rm splunk_64.tgz
         - uname -a
         - echo $SPLUNK_HOME
         - ls
