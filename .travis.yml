@@ -5,7 +5,7 @@ before_install:
         - tar xzf splunk_64.tgz
         - rm splunk_64.tgz
         - sudo dd if=/dev/zero of=./splunkfs.img bs=1M count=100
-        - sudo mkfs.ext4 splunkfs.img
+        - sudo yes | sudo mkfs.ext4 splunkfs.img
         - sudo mount splunkfs.img ./splunk/var
         - uname -a
         - echo $SPLUNK_HOME
