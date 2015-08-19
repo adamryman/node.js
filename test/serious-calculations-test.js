@@ -9,6 +9,14 @@ vows.describe('serious-calculations').addBatch({
       assert.isNumber(result);
       assert.equal(result, 12);
     }
+  },
+  'When this project is on travis ci': {
+      topic: function() {
+          seriousCalculations.testSplunk(this.callback);
+  },
+      'splunk should be installed': function (err, result) {
+          assert.equal(err, null);
   }
+}
 }).export(module);
 
