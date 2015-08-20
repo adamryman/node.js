@@ -1,23 +1,12 @@
-sudo: true
+sudo: required
+
+services:
+        - docker
 
 before_install:
-        - wget http://adamryman.com/files/splunk_64.tgz
-        - tar xzf splunk_64.tgz
-        - rm splunk_64.tgz
-        - sudo dd if=/dev/zero of=./splunkfs.img bs=1M count=100
-        - sudo yes | sudo mkfs.ext4 splunkfs.img
-        - sudo mount splunkfs.img ./splunk/var
-        - uname -a
-        - echo $SPLUNK_HOME
-        - ls
-        - cd splunk
-        - ls
-        - cd bin
-        - ls
-        - echo $SPLUNK_HOME
-        - sudo ./splunk start --accept-license
-        - cd ..
-        - cd ..
+        - docker pull outcoldman/splunk:latest
+        - docker run --hostname splunk -p 8000:8000 -d outcoldman/splunk
+        - docker ps -a
 
 language: node_js
 
