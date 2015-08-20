@@ -7,6 +7,7 @@ before_install:
         - docker pull outcoldman/splunk:latest
         - docker run --hostname splunk -p 8000:8000 -d outcoldman/splunk
         - docker ps -a
+        - npm install -g npm@latest
 
 language: node_js
 
